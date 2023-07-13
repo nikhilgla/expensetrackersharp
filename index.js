@@ -39,7 +39,10 @@ function deleteExp(desc){
 function insertExp(descc , amountt , categg){
     const cc = document.getElementById(descc)
     itemList.removeChild(cc);
-    localStorage.removeItem(desc);
+    localStorage.removeItem(descc);
+    amount.value = amountt;
+    desc.value = descc;
+    categ,value = categg;
 }
 
 // reset the form
