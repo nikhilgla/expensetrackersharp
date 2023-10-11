@@ -31,3 +31,21 @@ exports.postInfo =(req,res,next) =>{
         console.log(err);
       });
 };
+
+exports.deleteItem = async (req,res,next) =>{
+  console.log(req.params);
+  const item = await Expense.findByPk(req.params.prodId);
+  console.log(item);
+  await item.destroy();
+  console.log("deleted");
+  res.redirect('/');
+};
+
+exports.insertItem = async (req,res,next) =>{
+  console.log(req.params);
+  const item = await Expense.findByPk(req.params.prodId);
+  console.log(item.title);
+  
+  //await item.destroy();
+  res.redirect('/');
+};

@@ -2,20 +2,27 @@ const path = require('path');
 
 const express = require('express');
 const onlyController = require('./controllers/onlyController');
-const bookingController = require('./controllers/bookingController');
+const expenseController = require('./controllers/expenseController');
 
 const router = express.Router();
 
+//EJS ROUTES
 router.get('/', onlyController.getPage);
 
 router.post('/', onlyController.postInfo);
 
-router.get('/user/booking', bookingController.getData)
+router.post('/deleteItem/:prodId' , onlyController.deleteItem)
 
-router.post('/user/booking', bookingController.postData)
+router.post('/insertItem/:prodId' , onlyController.insertItem)
 
-router.delete('/user/booking/:delId', bookingController.deleteData)
 
-router.post('/user/booking/ins/:insId', bookingController.insertData)
+// WITHOUR EJS
+router.get('/user/booking', expenseController.getData)
+
+router.post('/user/booking', expenseController.postData)
+
+router.delete('/user/booking/:delId', expenseController.deleteData)
+
+router.post('/user/booking/ins/:insId', expenseController.insertData)
 
 module.exports = router;

@@ -23,7 +23,7 @@ exports.deleteData = async (req,res,next) =>{
   console.log(req.body)
   const item = await Booking.findByPk(req.params.delId);
   item.destroy();
-  
+  console.log("deleted");
   res.status(202).json({newUserDetail: item})
 };
 

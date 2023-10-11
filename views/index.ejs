@@ -27,8 +27,10 @@
             <ul class="items">
                 <% for (let product of prods) { %>
               <li class="item"> <%= product.title %> - <%= product.price %> - <%= product.description %>
-                <button class="btn btndel btn-danger btn-sm float-right delete">X</button>
-                <button class="btn btn-success btn-sm float-right">Ins</button>
+                <form action='/deleteItem/<%= product.id %>' method="POST" class="float-right" style="display: contents;">
+                <button type="submit" class="btn btndel btn-danger btn-sm float-right delete">X</button></form>
+                <form action='/insertItem/<%= product.id %>' method="POST" class="float-right" style="display: contents;">
+                <button type="submit" class="btn btn-success btn-sm float-right">Ins</button></form>
             </li>
               <% } %>
             </ul>
