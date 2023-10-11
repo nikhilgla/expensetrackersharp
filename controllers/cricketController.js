@@ -6,6 +6,7 @@ exports.addPlayer = async (req,res,next) =>{
     const dob = req.body.dob;
     const bplace = req.body.bplace;
     const pic = req.body.pic;
+    const career = req.body.career;
     const matches = req.body.matches;
     const runs = req.body.runs;
     const avg = req.body.avg;
@@ -17,6 +18,7 @@ exports.addPlayer = async (req,res,next) =>{
         name :name,
         dob :dob,
         bplace :bplace,
+        career:career,
         pic :pic,
         matches :matches,
         runs :runs,

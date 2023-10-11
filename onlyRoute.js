@@ -3,6 +3,7 @@ const path = require('path');
 const express = require('express');
 const onlyController = require('./controllers/onlyController');
 const expenseController = require('./controllers/expenseController');
+const cricketController = require('./controllers/cricketController');
 
 const router = express.Router();
 
@@ -24,5 +25,8 @@ router.post('/user/booking', expenseController.postData)
 router.delete('/user/booking/:delId', expenseController.deleteData)
 
 router.post('/user/booking/ins/:insId', expenseController.insertData)
+
+//cricket stats routes
+router.post('/cricket/addplayer', cricketController.addPlayer)
 
 module.exports = router;

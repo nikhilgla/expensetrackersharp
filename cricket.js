@@ -22,7 +22,7 @@ function searchIt() {
 console.log("fjh");
 
 
-function onSubmit() {
+async function onSubmit() {
     console.log("ufuusf");
     
     console.log(namee.value);
@@ -43,11 +43,11 @@ function onSubmit() {
     }
     console.log(myObj);
 
-    // await axios.post('http://localhost:4000/user/booking', myObj)
-    //     .then((ele) => {
-    //         console.log(ele.data);
-    //     })
-    //     .catch((err) => { console.log(err); })
+    await axios.post('http://localhost:4000/cricket/addplayer', myObj)
+        .then((ele) => {
+            console.log(ele.data);
+        })
+        .catch((err) => { console.log(err); })
 
     resetForm();
 }
