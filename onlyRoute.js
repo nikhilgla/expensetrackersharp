@@ -29,4 +29,6 @@ router.post('/user/booking/ins/:insId', expenseController.insertData)
 //cricket stats routes
 router.post('/cricket/addplayer', cricketController.addPlayer)
 
+router.get('/cricket/getplayer/:pName' , cricketController.getPlayer)
+
 module.exports = router;

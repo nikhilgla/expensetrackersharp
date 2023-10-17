@@ -12,7 +12,7 @@ const Cricket = sequelize.define('cricket', {
   name: Sequelize.STRING,
   dob: Sequelize.STRING,
   pic: Sequelize.STRING,
-  career: Sequelize.STRING,
+  career: Sequelize.TEXT('long'),
   bplace: Sequelize.STRING,
   runs: Sequelize.DOUBLE,
   matches: Sequelize.DOUBLE,

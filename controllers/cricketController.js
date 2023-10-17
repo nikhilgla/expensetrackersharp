@@ -29,3 +29,10 @@ exports.addPlayer = async (req,res,next) =>{
     }).then(console.log('new record created'))
     res.status(201).json({newUserDetail: data})
 };
+
+exports.getPlayer = async(req,res,next)=>{
+    console.log(req.params);
+    const data = await Cricket.findAll({where:{name:req.params.pName}})
+    res.status(202).json({newUserDetail: data})
+
+}
