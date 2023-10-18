@@ -31,4 +31,6 @@ router.post('/cricket/addplayer', cricketController.addPlayer)
 
 router.get('/cricket/getplayer/:pName' , cricketController.getPlayer)
 
+router.put('/cricket/editplayer/:pName' , cricketController.editPlayer)
+
 module.exports = router;
